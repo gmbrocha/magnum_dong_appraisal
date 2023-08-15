@@ -1,0 +1,61 @@
+/*todo: please change this god awful font*/
+@font-face {
+  font-family: "spantaran";
+  src: url("Spantaran-GE2D.ttf") format("truetype");
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    background-color: #262626;
+}
+
+body {
+    font-size: 11pt;
+    color: white;
+}
+
+#instruct {
+    text-align: center;
+    border-radius: 3px;
+    width: 15%;
+    height: 770px;
+    background-color: #646262;
+    margin: 6px;
+}
+
+.instruct {
+    height: 60px;
+}
+
+#app-header {
+    font-size: 22pt;
+    font-family: spantaran, sans-serif;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 6px;
+}
+
+#text-area-header {
+    border-radius: 3px;
+}
+
+#text-area {
+    margin: 6px;
+}
+
+#appraisal {
+    margin: 6px;
+}
+
+#appraisal-header {
+    border-radius: 3px;
+}
+
+#appraisal-display {
+    overflow-y: auto;
+}
+
+#item-info {
+    padding: 6px;
+}

@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+<!--this block will display the user message that contents are copied and provide a back button for previous pilot-->
+{% block price_disp %}
+<div id="item-info">
+    {% for key, dct in items.items() %}
+        <div>
+            Item: {{ key }}
+        </div>
+        <div>
+            Sell: {{ dct["sell_price"] }}
+        </div>
+        <div>
+            Buy: {{ dct["buy_price"] }}
+        </div>
+        <div>
+            Total (90% * quantity): {{ dct["total_price"] }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eve Buyback</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div id="app-header" style="text-align: center">Magnum Dong Buyback</div>
+  <div id="instruct" style="float: left">
+      <div style="padding: 6px; text-align: center">
+        INSTRUCTIONS PREASE READ
+      </div>
+      <p class="instruct">
+          <span style="font-weight: bold"> Repackage all items prior to submission, including ships.</span>
+      </p>
+      <p class="instruct">
+          1. First<span style="font-weight: bold"> repackage </span>all items and <span style="font-weight: bold">select</span> them.
+      </p>
+      <p class="instruct">
+          2. Press ctrl+c (copy).
+      </p>
+      <p class="instruct">
+          3. With the cursor in the textbox press ctrl+v (paste).
+      </p>
+      <p class="instruct">
+          4. Hit 'get prices bitch'.
+      </p>
+      <p class="instruct">
+          5. Wait a sec.
+      </p>
+      <p class="instruct">
+          6. Copy the <span style="font-weight: bold">contract price</span>.
+      </p>
+      <p class="instruct">
+          7. <span style="font-weight: bold">Create </span> a contract to the corp listed.
+      </p>
+      <p class="instruct">
+          8. <span style="font-weight: bold">Enter </span> price into the contract and hit accept.
+      </p>
+      <p class="instruct">
+          9. Watch your wallet get fat.
+      </p>
+  </div>
+  <div id="text-area" style="float: left; width: 30%">
+     <form method="post" action={{ url_for("get_appraisal") }}>
+            <div id="text-area-header" style="padding: 6px; background-color: #646262">
+                Paste items below.
+            </div>
+            <div>
+                <textarea name="appraisal-items" style="width: 99.5%" rows="48"></textarea>
+            </div>
+            <div>
+                <button id="items-submit" type="submit" name="order-type" value="buy">get prices bitch</button>
+            </div>
+     </form>
+  </div>
+  <div id="appraisal" style="float: left; width: 30%">
+      <div id="appraisal-header" style="padding: 6px; background-color: #646262">
+          Appraisal below.
+      </div>
+      <div id="appraisal-display"> {% block price_disp %} {% endblock %} </div>
+  </div>
+  <div id="extra-div" style="float: right">
+      <div style="padding: 6px; background-color: #646262">
+          Fourth Block for info/utility.
+      </div>
+  </div>
+
+</body>
+</html>
