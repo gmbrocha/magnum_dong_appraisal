@@ -14,10 +14,21 @@ body {
     color: white;
 }
 
+.container-column {
+    float: left;
+    width: 24.5%;
+    margin: 10px;
+}
+
+.container-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #instruct {
     text-align: center;
     border-radius: 3px;
-    width: 15%;
     height: 770px;
     background-color: #646262;
     margin: 6px;
@@ -48,12 +59,9 @@ body {
     margin: 6px;
 }
 
-#appraisal {
-    margin: 6px;
-}
-
 #appraisal-header {
     border-radius: 3px;
+    margin-left: 6px;
 }
 
 #appraisal-display {
@@ -66,5 +74,9 @@ body {
 
 #extra-div {
     padding: 10px;
-    text-align: justify;
+    text-align: center;
+    line-height: 60px;
+    background-color: #646262;
+    border-radius: 3px;
+    height: 770px;
 }
