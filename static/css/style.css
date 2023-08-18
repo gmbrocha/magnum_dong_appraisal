@@ -30,10 +30,14 @@ body {
 #app-header {
     font-size: 22pt;
     font-family: spantaran, sans-serif;
-    padding: 10px;
+    padding: 4px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
     margin-left: 6px;
+}
+
+#sub-header {
+    margin-bottom: 8px;
 }
 
 #text-area-header {
@@ -58,4 +62,9 @@ body {
 
 #item-info {
     padding: 6px;
+}
+
+#extra-div {
+    padding: 10px;
+    text-align: justify;
 }

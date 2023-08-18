@@ -31,7 +31,7 @@ def get_prices(item_text):
 
     for el in item_w_quant:
         total_buy_at_ninety = round(float(response_buy_prices[el[0]]["buy_price"] * int(el[1])) * .9)
-        response_buy_prices[el[0]]["total_price"] = total_buy_at_ninety
+        response_buy_prices[el[0]]["total_price"] = int(total_buy_at_ninety)
     return jsonify(response_buy_prices)
 
 

@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  <div id="app-header" style="text-align: center">Magnum Dong Buyback</div>
+  <div id="app-header" style="text-align: center; font-size: 32pt">Magnum Dong Buyback</div>
+  <div id="sub-header" style="text-align: center; font-size: 26pt; padding: 10px">
+      the <span style="font-weight: bold">biggest</span> donged buyback in New Eden
+  </div>
   <div id="instruct" style="float: left">
       <div style="padding: 6px; text-align: center">
         INSTRUCTIONS PREASE READ
@@ -44,11 +47,11 @@
   </div>
   <div id="text-area" style="float: left; width: 30%">
      <form method="post" action={{ url_for("get_appraisal") }}>
-            <div id="text-area-header" style="padding: 6px; background-color: #646262">
+            <div id="text-area-header" style="padding: 6px; background-color: #646262; margin-bottom: 6px">
                 Paste items below.
             </div>
             <div>
-                <textarea name="appraisal-items" style="width: 99.5%" rows="48"></textarea>
+                <textarea name="appraisal-items" style="width: 99.5%; height: 728px"></textarea>
             </div>
             <div>
                 <button id="items-submit" type="submit" name="order-type" value="buy">get prices bitch</button>
@@ -56,14 +59,37 @@
      </form>
   </div>
   <div id="appraisal" style="float: left; width: 30%">
-      <div id="appraisal-header" style="padding: 6px; background-color: #646262">
+      <div id="appraisal-header" style="padding: 6px; background-color: #646262; margin-bottom: 5px">
           Appraisal below.
       </div>
-      <div id="appraisal-display"> {% block price_disp %} {% endblock %} </div>
-  </div>
-  <div id="extra-div" style="float: right">
-      <div style="padding: 6px; background-color: #646262">
-          Fourth Block for info/utility.
+      <div id="appraisal-display"> <div id="item-info" style="height: 728px; overflow-y: auto">
+          {% block price_disp %} {% endblock %} </div>
+      </div>
+  <div id="extra-div" style="padding: 10px; background-color: #646262; width: 50%; font-size: 14pt; border-radius: 3px">
+      <div style="text-align: center">
+          Benefits of using Magnum Dong
+          <p style="text-align: justify">
+              The name is funny as hell, quite possibly the best buyback name in existence.
+          </p>
+          <hr>
+          <p style="text-align: justify">
+              We offer no hassle buying of your items throughout lowsec and nullsec with zero hidden charges and prompt
+              service.
+          </p>
+          <hr>
+          <p style="text-align: justify">
+              Our prices are updated twice daily, and we pay 90% of the Jita 4-4 buy price.
+          </p>
+          <hr>
+          <p style="text-align: justify">
+              Avoid <span style="font-weight: bold">worrying</span> about planning your route or getting ganked by nasty
+              pirates and losing all of your shinies.
+          </p>
+          <hr>
+          <p style="text-align: justify">
+              Most importantly, save <span style="font-weight: bold">time</span> and
+              play more - contract with us today and receive your isk as soon as the contract is received!
+          </p>
       </div>
   </div>
 

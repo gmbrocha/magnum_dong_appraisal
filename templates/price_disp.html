@@ -2,20 +2,22 @@
 
 <!--this block will display the user message that contents are copied and provide a back button for previous pilot-->
 {% block price_disp %}
-<div id="item-info">
     {% for key, dct in items.items() %}
         <div>
             Item: {{ key }}
         </div>
         <div>
-            Sell: {{ dct["sell_price"] }}
+            Sell: {{ dct["sell_price"] }} isk
         </div>
         <div>
-            Buy: {{ dct["buy_price"] }}
+            Buy: {{ dct["buy_price"] }} isk
         </div>
         <div>
-            Total (90% * quantity): {{ dct["total_price"] }}
+            Total (90% * quantity): {{ dct["total_price"] }} isk
         </div>
+        <hr>
     {% endfor %}
-</div>
+    <div>
+        Total Contract Price (We Pay!): {{ total }}
+    </div>
 {% endblock %}
